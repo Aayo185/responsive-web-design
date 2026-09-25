@@ -1,0 +1,189 @@
+/* Sparkle Academy — shared site styles */
+
+:root {
+  --bg: #0f1117;
+  --surface: #171a23;
+  --accent: #5eead4;
+  --accent-dark: #14b8a6;
+  --text: #e5e7eb;
+  --text-dim: #9ca3af;
+  --radius: 12px;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid #262a35;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: var(--accent-dark);
+  color: #06251f;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  margin-bottom: 0.25rem;
+}
+
+.hero p {
+  color: var(--text-dim);
+  max-width: 640px;
+  margin: 0.5rem auto;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  margin: 1.5rem auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+table.tech-table,
+table.reg-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+table.tech-table th,
+table.tech-table td,
+table.reg-table td {
+  border: 1px solid #2a2f3d;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+table.tech-table th {
+  background: #1e2230;
+}
+
+table.reg-table td:first-child {
+  width: 40%;
+  color: var(--text-dim);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #2a2f3d;
+  background: #0f1117;
+  color: var(--text);
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background: var(--accent);
+  color: #06251f;
+}
+
+input[type="reset"] {
+  background: #2a2f3d;
+  color: var(--text);
+  margin-right: 0.5rem;
+}
+
+.event-card {
+  margin-bottom: 2rem;
+}
+
+.event-card h2 {
+  margin-bottom: 0.1rem;
+}
+
+.event-card h3 {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--text-dim);
+  border-top: 1px solid #262a35;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #262a35;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    gap: 0.75rem;
+  }
+  main {
+    padding: 1.25rem 1rem 2rem;
+  }
+}
